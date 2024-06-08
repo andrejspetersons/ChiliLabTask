@@ -5,8 +5,8 @@ export const Route = createRootRoute({
     component: () => (
       <>
         <div>
-          <Link to="/" style={{color:'blue',textDecoration:'none',fontWeight:'bold'}}>
-            Product API
+          <Link to="/" className="text-blue-500 no-underline font-bold">
+            PRODUCT API
           </Link>
         </div>
         <hr />

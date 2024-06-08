@@ -16,6 +16,15 @@ export type ProductProps={
     image:string
 }
 
+export type ProductDetailProps={
+    id:number
+    title:string
+    price:number
+    category:string
+    image:string
+    description:string
+}
+
 export default function ProductCard(product:ProductProps){
     return(
         <Link to="/item/$itemId" params={{itemId:String(product.id)}}>
