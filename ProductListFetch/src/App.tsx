@@ -27,8 +27,8 @@ function App() {
 
   return (
     <>
-      <ProductCardList products={currentItems} ></ProductCardList>
-      <Pagination currentPage={currentPage} itemsPerPage={itemsPerPage} totalItems={items.length} paginate={paginate} ></Pagination>
+      <ProductCardList products={currentItems} />
+      <Pagination currentPage={currentPage} itemsPerPage={itemsPerPage} totalItems={items.length} paginate={paginate} />
     </>
   )
 }

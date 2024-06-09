@@ -1,6 +1,4 @@
 import { useState } from "react"
-import styles from "../ProductCard.module.css"
-import searchbarstyles from "../SearchBar.module.css"
 import ProductCard, { ProductProps } from "./ProductEntity"
 
 export default function ProductCardList(
@@ -12,9 +10,12 @@ export default function ProductCardList(
         setSearchQuery(e.target.value)
     }
 
-    const filteredProducts=products.filter(product=>
-        product.title.toLowerCase().includes(searchQuery.toLowerCase())    
-    )
+    const filteredProducts=searchQuery.trim()===""
+    ?products
+    :products.filter(product=>
+        product.title.toLowerCase().includes(searchQuery.trim().toLowerCase())|| 
+        product.category.toLowerCase().includes(searchQuery.trim().toLowerCase())     
+    )    
 
     return(
         <>
@@ -23,8 +24,7 @@ export default function ProductCardList(
             placeholder="Search products..."
             value={searchQuery}
             onChange={handleSearchChange}
-            className="mb-5 mt-5 ml-5 p-2 text-lg w-full max-w-md box-border border-2 border-blue-500 rounded focus: outline-blue-900"
-            /*className={searchbarstyles["search-bar"]}*/>
+            className="mb-5 mt-5 ml-5 p-2 text-lg w-full max-w-md box-border border-2 border-blue-500 rounded focus: outline-blue-900">
         </input><br></br>
         
         <div className="flex flex-wrap gap-4 justify-center">          
