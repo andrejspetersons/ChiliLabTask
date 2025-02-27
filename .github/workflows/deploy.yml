@@ -31,6 +31,10 @@ jobs:
           cd ProductListFetch
           npm run build
 
+  deploy:
+    needs: build  # The deploy job runs after the build job finishes successfully
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy (Example GitHub Pages)
         if: success()
         uses: peaceiris/actions-gh-pages@v3
