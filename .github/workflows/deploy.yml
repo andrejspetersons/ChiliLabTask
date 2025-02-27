@@ -4,10 +4,12 @@ on:
   pull_request:
     branches:
       - master
+      
+permissions:
+      contents: write  # Allow write access to contents (push to repository)
 
 jobs:
-  permissions:
-      contents: write  # Allow write access to contents (push to repository)
+  
   build:
     runs-on: ubuntu-latest
     steps:
