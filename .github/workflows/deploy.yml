@@ -9,6 +9,8 @@ on:
       - master
 
 jobs:
+  permissions:
+      contents: write  # Allow write access to contents (push to repository)
   build:
     runs-on: ubuntu-latest
     steps:
