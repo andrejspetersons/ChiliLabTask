@@ -21,10 +21,14 @@ jobs:
           node-version: 18
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          cd ProductListFetch
+          npm install
 
       - name: Build React App
-        run: npm run build
+        run: |
+          cd ProductListFetch
+          npm run build
 
       - name: Deploy (Example GitHub Pages)
         if: success()
