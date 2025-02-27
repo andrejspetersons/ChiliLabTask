@@ -3,9 +3,6 @@ name: Deploy React App
 on:
   push:
     branches:
-      - master  # Runs when you push to the main branch
-  pull_request:
-    branches:
       - master
 
 jobs:
