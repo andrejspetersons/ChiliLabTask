@@ -11,6 +11,7 @@ on:
       
 permissions:
       contents: write  # Allow write access to contents (push to repository)
+      security-events: write #Add permission for scanning tools
 
 jobs:
 
