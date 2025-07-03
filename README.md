@@ -5,7 +5,7 @@ Simple Product API fetching app </p>
 **Stack:** ```React```;```TypeScript```;```Vite``` and ```TailwindCSS```
 ## Installation
 + Install zip file
-+ Unpack in some map
++ Unpack in fold
 + Open in VS Code terminal
 + Move to the ProductListFetch
 ```
